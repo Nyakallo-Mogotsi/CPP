@@ -1,4 +1,4 @@
-Python to C++
+//Python to C++
 The code of a Python program has been provided (see next page). 
 The program requests the user to enter a date of birth and validates the input to be a four- digit value. The program will only continue if the input is valid. 
 Then the program determines whether the year is a leap year or not and displays the result. 
@@ -16,4 +16,74 @@ Do the following:
 Convert the provided Python program into a C++ program (next page). 
 NOTE: 
 •	All the instructions in the provided Python program MUST be part of the C++ program. 
-•	The output must be in the same format as that of the provided Python program. 
+•	The output must be in the same format as that of the provided Python program. //
+
+#include <iostream>
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+    cout << "Assignment  1\n" << endl;
+
+    int thisYear = 2022;
+    int yearOfBirth = 0;
+
+    cout << "Enter your year of birth (4 digits): ";
+    cin >> yearOfBirth;
+
+
+
+    while ((yearOfBirth < 1000) || (yearOfBirth > 9999) || (yearOfBirth >= 2022))
+    {
+        cout << yearOfBirth << " is invalid.Try again."<<endl;
+        cout << "Enter your year of birth (4 digits): ";
+        cin >> yearOfBirth;
+    }
+
+    if(yearOfBirth % 400 ==0 && yearOfBirth % 100 == 0)
+    {
+        cout << yearOfBirth << " was a leap year.\n" << endl;
+    }
+    else if (yearOfBirth % 4 == 0 && yearOfBirth % 100 != 0)
+    {
+        cout << yearOfBirth << " was a leap year.\n" << endl;
+    }
+    else
+    {
+        cout << yearOfBirth << " was not a leap year.\n";
+    }
+
+ int age = thisYear-yearOfBirth;
+
+    cout << "\nYou are " << age << " years old." <<endl;
+
+    if(yearOfBirth <= 1945)
+    {
+        printf("You belong to the silent generation.");
+    }
+    else if (yearOfBirth >= 1945 && yearOfBirth <= 1964)
+    {
+        printf("You are a Baby Boomer.");
+    }
+    else if (yearOfBirth >= 1965 && yearOfBirth <= 1976)
+    {
+        printf("You belong to Generation X.");
+    }
+    else if (yearOfBirth >= 1977 && yearOfBirth <= 1995)
+    {
+        printf("You belong to Generation Y.");
+    }
+    else if (yearOfBirth >= 1996 && yearOfBirth <= 2015)
+    {
+        printf("You belong to Generation Z.");
+    }
+    else
+    {
+        printf("Your generation is still uncatagorized.\n");
+    }
+
+    printf("\n\nDone!\n");
+    return 0;
+}
