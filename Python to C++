@@ -1,0 +1,19 @@
+Python to C++
+The code of a Python program has been provided (see next page). 
+The program requests the user to enter a date of birth and validates the input to be a four- digit value. The program will only continue if the input is valid. 
+Then the program determines whether the year is a leap year or not and displays the result. 
+A leap year is exactly divisible by 4 except for century years (years ending with 00). The century year is a leap year only if it is perfectly divisible by 400. 
+Thereafter the program calculates and displays the person’s age in years using the current year as a constant value. 
+The program then uses the following categories to determine which generation the person belongs to:  
+The Silent generation – before 1945 
+Baby Boomers – from 1945 to 1964 
+Generation X – from 1965 to 1976 
+Generation Y – from 1977 to 1995 
+Generation Z – from 1996 to 2015 
+Uncategorized – 2016+  
+The result is displayed as shown in the example runs shown below the provided Python code. 
+Do the following: 
+Convert the provided Python program into a C++ program (next page). 
+NOTE: 
+•	All the instructions in the provided Python program MUST be part of the C++ program. 
+•	The output must be in the same format as that of the provided Python program. 
